@@ -1,7 +1,6 @@
 package com.jx.pojo;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,6 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name="PRODUCT")
 public class Product {
@@ -17,11 +17,8 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
-	
-	@Column(name="NAME",nullable=false)
+
 	private String name;
-	
-	@Column(name="DESCRIPTION",nullable=false)
 	private String description;
 	
 	@ManyToOne(cascade=CascadeType.ALL)

@@ -9,9 +9,12 @@ public interface ProductService {
     
     List<Product> findAllProducts();
      
-    void deleteProductByName(String name);
+    void deleteProductsByName(String name);
+    void deleteProductById(int id);
      
-    Product findProductByName(String name);
+    List<Product> findProductsByName(String name);
+    
+    Product findProductById(int id);
      
     void updateProduct(Product product);
 }
